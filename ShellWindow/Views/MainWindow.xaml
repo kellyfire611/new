@@ -9,6 +9,21 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="581.757" Width="858.446">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+       
         <ContentControl prism:RegionManager.RegionName="ContentRegion" />
+        <ContentControl prism:RegionManager.RegionName="TestRegion" Grid.Row="1" Background="#FFF79D9D" />
+        <Button Style="{StaticResource MaterialDesignFlatButton}"
+                        Command="{x:Static materialDesign:DrawerHost.OpenDrawerCommand}"
+                        CommandParameter="{x:Static Dock.Left}" Grid.Row="2">
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Binoculars" />
+                <TextBlock Margin="8 0 0 0">EXPLORE</TextBlock>
+            </StackPanel>
+        </Button>
     </Grid>
 </Window>
